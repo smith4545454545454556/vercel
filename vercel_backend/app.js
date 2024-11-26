@@ -14,6 +14,10 @@ const corsOptions = {
 app.use(cors(corsOptions))
 app.options("*", cors(corsOptions));
 
+
 app.use(express.json())
+app.get("/", (req, res) => {
+    res.send("hello")
+})
 app.use(router)
 export default app
